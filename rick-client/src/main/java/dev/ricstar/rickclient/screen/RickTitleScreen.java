@@ -18,10 +18,10 @@ public class RickTitleScreen extends Screen {
         int w = 210, h = 22;
         int x = this.width / 2 - w / 2;
         int y = this.height / 2 - 10;
-        this.addRenderableWidget(Button.builder(Component.literal("Singleplayer"), b -> this.minecraft.setScreen(new SelectWorldScreen(this))).bounds(x, y, w, h).build());
-        this.addRenderableWidget(Button.builder(Component.literal("Multiplayer"), b -> this.minecraft.setScreen(new JoinMultiplayerScreen(this))).bounds(x, y + 28, w, h).build());
-        this.addRenderableWidget(Button.builder(Component.literal("Rick Client Menu"), b -> this.minecraft.setScreen(new RickMenuScreen(this))).bounds(x, y + 56, w, h).build());
-        this.addRenderableWidget(Button.builder(Component.literal("Options"), b -> this.minecraft.setScreen(new OptionsScreen(this, this.minecraft.options))).bounds(x, y + 84, 102, h).build());
+        this.addRenderableWidget(Button.builder(Component.literal("Singleplayer"), b -> this.minecraft.gui.setScreen(new SelectWorldScreen(this))).bounds(x, y, w, h).build());
+        this.addRenderableWidget(Button.builder(Component.literal("Multiplayer"), b -> this.minecraft.gui.setScreen(new JoinMultiplayerScreen(this))).bounds(x, y + 28, w, h).build());
+        this.addRenderableWidget(Button.builder(Component.literal("Rick Client Menu"), b -> this.minecraft.gui.setScreen(new RickMenuScreen(this))).bounds(x, y + 56, w, h).build());
+        this.addRenderableWidget(Button.builder(Component.literal("Options"), b -> this.minecraft.gui.setScreen(new OptionsScreen(this, this.minecraft.options, false))).bounds(x, y + 84, 102, h).build());
         this.addRenderableWidget(Button.builder(Component.literal("Quit"), b -> this.minecraft.stop()).bounds(x + 108, y + 84, 102, h).build());
     }
 

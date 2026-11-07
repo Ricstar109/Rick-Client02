@@ -37,8 +37,8 @@ public class RickMenuScreen extends Screen {
             RickClient.nextAccent();
             rebuildWidgets();
         }).bounds(left + 12, top + 230, sideW - 22, 24).build());
-        this.addRenderableWidget(Button.builder(Component.literal("Back"), b -> this.minecraft.setScreen(parent)).bounds(left + 12, top + 270, sideW - 22, 22).build());
-        this.addRenderableWidget(Button.builder(Component.literal("Close  ×"), b -> this.minecraft.setScreen(parent)).bounds(left + panelW - 94, top + 12, 80, 20).build());
+        this.addRenderableWidget(Button.builder(Component.literal("Back"), b -> this.minecraft.gui.setScreen(parent)).bounds(left + 12, top + 270, sideW - 22, 22).build());
+        this.addRenderableWidget(Button.builder(Component.literal("Close  ×"), b -> this.minecraft.gui.setScreen(parent)).bounds(left + panelW - 94, top + 12, 80, 20).build());
     }
 
     @Override
